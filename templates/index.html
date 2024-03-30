@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Counseling Questionnaire</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div id="logo">CareerEase</div>
+  <div class="navbar">
+    <ul>
+      <li><a href="#questionnaireForm">Take a Test</a></li>
+      <li><a href="#streams">Streams</a></li>
+      <!-- <li><a href="#">About Us</a></li> -->
+    </ul>
+  </div>
+
+  <div class="landingage">
+    <h1> Congratulations on Completing Your SSC Exams!😍
+    </h1>
+    <div class="para">Feeling overwhelmed about choosing your stream after SSC? </div>
+    <div class="para">Don't worry, CareerEase is here to guide you. Take our personalized assessment and discover your
+      ideal career path today!</div>
+
+  </div>
+  <div id="img"><img
+      src="https://png.pngtree.com/png-vector/20221102/ourmid/pngtree-illustration-of-students-confused-about-the-future-png-image_6406824.png"
+      alt="Illustration of students confused about the future"></div>
+
+  <div class="container">
+    <br>
+    <br>
+
+    <h1 style="text-align: center;">Embark on your journey to discovering your ideal career path after 10th grade with
+      our personalized assessment !</h1>
+    <br>
+    <br>
+    <br>
+
+
+    <form id="questionnaireForm" action="/predict" method="POST">
+      <div class="question">
+        <label for="Q1">Q1. Do you enjoy solving complex mathematical problems?</label>
+        <select id="Q1" name="Q1">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q2">Q2. Are you curious about how things work and enjoy conducting experiments?</label>
+        <select id="Q2" name="Q2">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q3">Q3. Do you have a keen interest in understanding human behavior and society?</label>
+        <select id="Q3" name="Q3">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q4">Q4. Are you passionate about working with computers and technology? </label>
+        <select id="Q4" name="Q4">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q5">Q5. Do you feel fulfilled when helping others and making a positive impact?</label>
+        <select id="Q5" name="Q5">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q6">Q6. Are you drawn to exploring different cultures and languages? </label>
+        <select id="Q6" name="Q6">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q7">Q7. Do you have a knack for managing finances and budgeting? </label>
+        <select id="Q7" name="Q7">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q8">Q8. Are you fascinated by historical events and their significance?</label>
+        <select id="Q8" name="Q8">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q9">Q9. Do you enjoy working independently and setting your own pace?</label>
+        <select id="Q9" name="Q9">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q10">Q10. Are you interested in pursuing a career in healthcare or medicine? </label>
+        <select id="Q10" name="Q10">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q11">Q11. Are you skilled at analyzing and interpreting data?</label>
+        <select id="Q11" name="Q11">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q12">Q12. Do you have a creative mind and enjoy expressing yourself through art or design?</label>
+        <select id="Q12" name="Q12">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q13">Q13. Are you a natural leader who enjoys taking charge of projects?</label>
+        <select id="Q13" name="Q13">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q14">Q14. Do you thrive in fast-paced environments and enjoy handling pressure?</label>
+        <select id="Q14" name="Q14">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q15">Q15. Are you interested in environmental conservation and sustainability? </label>
+        <select id="Q15" name="Q15">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q16">Q16. Are you passionate about advocating for social justice and equality? </label>
+        <select id="Q16" name="Q16">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q17">Q17. Do you enjoy planning and organizing events or projects?</label>
+        <select id="Q17" name="Q17">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q18">Q18. Are you skilled at communicating effectively with others? </label>
+        <select id="Q18" name="Q18">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+
+      <div class="question">
+        <label for="Q19">Q
+          19. Do you have a strong interest in literature and storytelling?</label>
+        <select id="Q19" name="Q19">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q20">Q20. Are you fascinated by the principles of physics and how things move? </label>
+        <select id="Q20" name="Q20">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q21">Q21. Do you enjoy analyzing economic trends and market dynamics? </label>
+        <select id="Q21" name="Q21">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q22">Q22. Are you interested in exploring the mysteries of the natural world and biology? </label>
+        <select id="Q22" name="Q22">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q23">Q23. Do you have a passion for culinary arts and experimenting with flavors?</label>
+        <select id="Q23" name="Q23">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q24">Q24. Are you skilled at problem-solving and finding innovative solutions?</label>
+        <select id="Q24" name="Q24">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q25">Q25. Do you have an interest in law and justice?</label>
+        <select id="Q25" name="Q25">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q26">Q26. Are you fascinated by the intricacies of technology and software development? </label>
+        <select id="Q26" name="Q26">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q27">Q27. Are you drawn to the world of business and entrepreneurship? </label>
+        <select id="Q27" name="Q27">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q28">Q28. Do you enjoy conducting research and exploring new ideas? </label>
+        <select id="Q28" name="Q28">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <label for="Q29">Q
+          29. Are you interested in exploring the wonders of the universe and astronomy?</label>
+        <select id="Q29" name="Q29">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="Q30">Q30. Do you have a passion for music, dance, or performing arts? </label>
+        <select id="Q30" name="Q30">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <!-- Repeat the above block for all 30 questions -->
+      <!-- Make sure to adjust IDs and names according to your dataset columns -->
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <!-- Streams section -->
+
+
+  <div class="streams" id="streams">
+    <h2>Explore Career Streams</h2>
+    <p style="text-align: center;">After 10th grade, students can choose from various career streams:</p>
+   
+    <div id="stream_img">
+      <img src="https://careergambit.com/wp-content/uploads/2021/03/career-counselling-after-10th-2.jpg" alt="">
+     </div>
+    <ul>
+      <div class="stream">
+        <h3>Science</h3>  
+        <ul>
+          <li>Science stream is tailored for students interested in subjects like Physics, Chemistry, Biology, and
+            Mathematics (PCBM).</li>
+          <li> It includes in-depth study of natural phenomena, scientific principles, and experimentation.</li>
+          <li>Subjects typically covered include Physics, Chemistry, Biology, Mathematics, and elective subjects like
+            Computer Science or Biotechnology. </li>
+          <li>This stream opens up pathways to careers in medicine, engineering, research, biotechnology, pharmacy, and
+            more.</li>
+        </ul>
+      </div>
+      <div class="stream">
+        <h3>Commerce</h3>
+        <p>
+        <ul>
+          <li>Commerce stream is ideal for students interested in business, finance, and economics. </li>
+          <li>It includes subjects like Accountancy, Business Studies, Economics, and Mathematics. </li>
+          <li>Students learn about financial transactions, business management, economics principles, and taxation.
+          </li>
+          <li>This stream prepares students for careers in accounting, finance, banking, entrepreneurship, management,
+            and commerce-related fields. </li>
+        </ul>
+        </p>
+
+      </div>
+      <div class="stream">
+        <h3>Arts</h3>
+        <p>
+        <ul>
+          <li>Arts stream is for students with a passion for humanities, languages, literature, and social sciences.
+          </li>
+          <li>It includes subjects like History, Geography, Political Science, Sociology, Psychology, Economics, and
+            Languages (English, Regional Languages). </li>
+          <li>Students delve into the study of society, culture, history, literature, and human behavior.</li>
+          <li>This stream offers opportunities in fields such as journalism, teaching, civil services, social work,
+            literature, fine arts, and more.</li>
+
+        </ul>
+        </p>
+
+
+      </div>
+      <div class="stream">
+        <h3>Engineering</h3>
+        <p>
+        <ul>
+          <li>Engineering stream focuses on the application of scientific principles to design, develop, and maintain
+            structures, machines, systems, and processes. </li>
+          <li>It includes subjects like Physics, Chemistry, Mathematics, and specialized branches such as Mechanical,
+            Civil, Electrical, Computer Science, and Electronics Engineering.</li>
+          <li>Students learn problem-solving, critical thinking, and technical skills required for various engineering
+            disciplines.</li>
+          <li>This stream leads to careers in fields like aerospace, automotive, civil, computer, electrical, and
+            mechanical engineering, among others.</li>
+
+
+
+        </ul>
+        </p>
+
+
+      </div>
+
+
+
+      <div class="stream">
+        <h3>Vocational Courses</h3>
+        <p>
+        <ul>
+          <li>Vocational courses provide practical skills and training for specific trades or industries.</li>
+          <li>It includes courses like ITI (Industrial Training Institute), Diploma in Engineering, Polytechnic courses,
+            and vocational training programs in sectors such as hospitality, healthcare, automotive, construction, and
+            more.</li>
+          <li>Students gain hands-on experience and specialized skills relevant to their chosen field.</li>
+          <li>This stream offers direct entry into the workforce or further education in specialized areas.</li>
+        </ul>
+        </p>
+
+      </div>
+    </ul>
+  
+
+
+
+
+
+  <script>
+    document.getElementById('questionnaireForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = this;
+      const formData = new FormData(form);
+
+      fetch('/predict', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          const resultDiv = document.getElementById('result');
+          if (data.hasOwnProperty('prediction')) {
+            resultDiv.innerHTML = `<p>Your suitable stream would be ${data.prediction}</p>`;
+          } else {
+            resultDiv.innerHTML = '<p>An error occurred. Please try again later.</p>';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          resultDiv.innerHTML = '<p>An error occurred. Please try again later.</p>';
+        });
+    });
+  </script>
+
+</body>
+
+<footer>
+  <p>  Thank you for visiting our website ! Wish you good luck for your future endiviours !😉  </p>
+</footer>
+
+</html>
